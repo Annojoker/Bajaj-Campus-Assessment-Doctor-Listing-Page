@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import queryString from 'query-string';
 
 function SearchBar({ doctors, onSearch }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [suggestions, setSuggestions] = useState([]);
-  const navigate = useNavigate();
-
   useEffect(() => {
     const parsedQuery = queryString.parse(window.location.search);
     if (parsedQuery.search) {
