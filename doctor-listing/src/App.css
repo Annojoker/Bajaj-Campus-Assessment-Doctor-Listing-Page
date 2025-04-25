@@ -1,0 +1,141 @@
+/* src/App.css */
+.App {
+  text-align: left;
+  padding: 20px;
+  font-family: sans-serif;
+  display: flex; /* Enable Flexbox for the main App container */
+}
+
+.App-header {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  width: 300px; /* Adjust the width of the filter area as needed */
+  flex-shrink: 0; /* Prevent the filter area from shrinking */
+}
+
+.doctor-list-container {
+  flex-grow: 1; /* Allow the doctor list to take up remaining space */
+  padding: 20px;
+}
+
+/* Search Bar Styles */
+.App-header > .autocomplete-container {
+  margin-bottom: 15px;
+  position: relative;
+  display: flex;
+}
+
+.App-header > .autocomplete-container input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-right: 2px;
+}
+
+.App-header > .autocomplete-container button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.autocomplete-container .suggestion-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.autocomplete-container .suggestion-list li {
+  padding: 10px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.autocomplete-container .suggestion-list li:last-child {
+  border-bottom: none;
+}
+
+.autocomplete-container .suggestion-list li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Filter Panel Styles */
+.filter-panel {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.filter-panel > div {
+  margin-bottom: 10px;
+}
+
+.filter-panel h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 1.2rem;
+}
+
+.filter-panel label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.filter-panel input[type="radio"],
+.filter-panel input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Doctor List Styles */
+.doctor-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.doctor-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.doctor-card h2 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.doctor-card p {
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.doctor-card p strong {
+  color: #333;
+}
